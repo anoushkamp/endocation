@@ -1,0 +1,453 @@
+---
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Get in touch with Endocation for questions, research, collaborations and women's health science communication."
+    />
+    <title>Contact | ENDOCATION</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="/" class="brand">
+        <img
+          src="/endocation-logo.png"
+          alt="Endocation logo"
+          class="brand-logo"
+        />
+        <span>ENDOCATION</span>
+      </a>
+
+     <nav>
+  <a href="/research" data-astro-reload>Latest Research</a>
+  <a href="/endometriosis-101" data-astro-reload>Endometriosis 101</a>
+  <a href="/advocate" data-astro-reload>Advocate</a>
+  <a href="/about" data-astro-reload>About</a>
+  <a href="/contact" class="active" data-astro-reload>Contact</a>
+</nav>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">LET'S TALK</p>
+
+          <h1>
+            Questions, collaborations<br />
+            or just want to <span>say hi?</span>
+          </h1>
+
+          <p class="intro">
+            Whether you're a reader, researcher, student, organisation or
+            fellow women's health nerd, I'd love to hear from you.
+          </p>
+
+          <div class="contact-note">
+            <strong>A little note 💜</strong>
+            <p>
+              Endocation is an educational science communication platform.
+              I'm not able to provide individual medical advice, diagnose
+              symptoms or recommend treatment.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <p class="form-eyebrow">SEND A MESSAGE</p>
+          <h2>Get in touch.</h2>
+
+          <form
+            name="contact"
+            method="POST"
+            action="/contact-success"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+
+            <p class="hidden">
+              <label>
+                Don't fill this out if you're human:
+                <input name="bot-field" />
+              </label>
+            </p>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="you@email.com"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="reason">I'm getting in touch about...</label>
+              <select id="reason" name="reason" required>
+                <option value="" disabled selected>Choose an option</option>
+                <option value="reader-question">A reader question</option>
+                <option value="research">Research</option>
+                <option value="collaboration">A collaboration</option>
+                <option value="media">Media / press</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell me what's on your mind..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Send message →</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="collaboration">
+        <p class="eyebrow">COLLABORATIONS</p>
+
+        <h2>Working in women's health?</h2>
+
+        <p>
+          I'm especially interested in connecting with researchers,
+          organisations and people working across women's health, endometriosis,
+          science communication and patient advocacy.
+        </p>
+
+        <p>
+          If you have research you'd like to share, an idea for Endocation or
+          think we could work together, send me a message.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="/" class="brand footer-brand">
+        <img
+          src="/endocation-logo.png"
+          alt="Endocation logo"
+          class="brand-logo"
+        />
+        <span>ENDOCATION</span>
+      </a>
+
+      <p>
+        Evidence-led women's health education. Not individual medical advice.
+      </p>
+
+      <p class="copyright">© 2026 ENDOCATION</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #fffaf2;
+    color: #261235;
+    font-family: "Manrope", sans-serif;
+  }
+
+  header {
+    min-height: 88px;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(38, 18, 53, 0.1);
+    background: #fffaf2;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #261235;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+ .brand-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  nav a {
+    color: #261235;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  nav a:hover,
+  nav a.active {
+    color: #7a2cff;
+  }
+
+  .contact-hero {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 6vw 110px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 90px;
+    align-items: center;
+  }
+
+  .eyebrow,
+  .form-eyebrow {
+    margin: 0 0 20px;
+    color: #7a2cff;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+  }
+
+  h1 {
+    margin: 0;
+    max-width: 700px;
+    font-size: clamp(3rem, 5.2vw, 5.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+  }
+
+  h1 span {
+    color: #7a2cff;
+  }
+
+  .intro {
+    max-width: 600px;
+    margin: 30px 0 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .contact-note {
+    max-width: 590px;
+    margin-top: 42px;
+    padding: 24px 26px;
+    border-radius: 20px;
+    background: #f0eaff;
+  }
+
+  .contact-note strong {
+    font-size: 0.9rem;
+  }
+
+  .contact-note p {
+    margin: 8px 0 0;
+    font-size: 0.87rem;
+    line-height: 1.7;
+  }
+
+  .form-card {
+    padding: 48px;
+    border: 1px solid rgba(38, 18, 53, 0.1);
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 0 18px 60px rgba(38, 18, 53, 0.07);
+  }
+
+  .form-card h2 {
+    margin: 0 0 32px;
+    font-size: 2.1rem;
+    letter-spacing: -0.04em;
+  }
+
+  .field {
+    margin-bottom: 22px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid rgba(38, 18, 53, 0.18);
+    border-radius: 12px;
+    outline: none;
+    background: #fffaf2;
+    color: #261235;
+    font: inherit;
+    font-size: 0.9rem;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #7a2cff;
+    box-shadow: 0 0 0 3px rgba(122, 44, 255, 0.1);
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 12px;
+    background: #f1ff38;
+    color: #261235;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(38, 18, 53, 0.12);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .collaboration {
+    padding: 100px 6vw;
+    background: #7a2cff;
+    color: white;
+    text-align: center;
+  }
+
+  .collaboration .eyebrow {
+    color: #f1ff38;
+  }
+
+  .collaboration h2 {
+    max-width: 800px;
+    margin: 0 auto 26px;
+    font-size: clamp(2.5rem, 4vw, 4.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+  }
+
+  .collaboration > p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 14px auto;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  footer {
+    padding: 40px 6vw;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 30px;
+    background: #261235;
+    color: white;
+  }
+
+  footer .brand {
+    color: white;
+  }
+
+  footer > p {
+    margin: 0;
+    font-size: 0.78rem;
+    opacity: 0.75;
+    text-align: center;
+  }
+
+  footer .copyright {
+    justify-self: end;
+  }
+
+  @media (max-width: 900px) {
+   header {
+  padding: 20px 5vw;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 20px;
+    }
+
+    .contact-hero {
+      padding: 70px 6vw;
+      grid-template-columns: 1fr;
+      gap: 55px;
+    }
+
+    .form-card {
+      padding: 32px 24px;
+    }
+
+    footer {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+
+    footer .copyright {
+      justify-self: center;
+    }
+  }
+</style>

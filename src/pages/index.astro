@@ -1,0 +1,1094 @@
+---
+const articles = [
+  {
+    tag: "NEW THIS WEEK",
+    title:
+      "Researchers found another clue about why endometriosis causes chronic pain.",
+    excerpt:
+      "A new study explores how inflammatory signalling may contribute to persistent pain in endometriosis — and what the findings actually mean.",
+    readTime: "6 MIN READ",
+  },
+  {
+    tag: "RESEARCH BREAKDOWN",
+    title:
+      "What scientists are learning about progesterone resistance in endometriosis.",
+    excerpt:
+      "Why some endometrial tissue responds differently to hormonal signalling, explained without the jargon.",
+    readTime: "5 MIN READ",
+  },
+  {
+    tag: "WOMEN'S HEALTH",
+    title:
+      "Why a promising biomarker study does not automatically mean a new diagnostic test.",
+    excerpt:
+      "A useful reminder of the difference between exciting early research and something ready for clinical practice.",
+    readTime: "7 MIN READ",
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Endocation translates endometriosis and women's health research into language that actually makes sense."
+    />
+    <title>Endocation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="site-header">
+    <a href="/" class="brand">
+  <img src="/endocation-logo.png" alt="Endocation logo" class="brand-logo" />
+  <span>ENDOCATION</span>
+</a>
+
+      <nav>
+  <a href="/research" data-astro-reload>Latest Research</a>
+  <a href="/endometriosis-101" data-astro-reload>Endometriosis 101</a>
+  <a href="/advocate" data-astro-reload>Advocate</a>
+  <a href="/about" data-astro-reload>About</a>
+  <a href="/contact" data-astro-reload>Contact</a>
+</nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">ENDOMETRIOSIS · WOMEN'S HEALTH · SCIENCE</p>
+
+          <h1>
+            The research is complicated.
+            <span>Your health shouldn't be.</span>
+          </h1>
+
+          <p class="hero-description">
+            Endometriosis and women's health research translated into language
+            that actually makes sense — so you can understand the evidence,
+            ask better questions and advocate for your health.
+          </p>
+
+          <div class="hero-actions">
+            <a href="/research" class="button primary">Read the latest</a>
+<a href="/endometriosis-101" class="button secondary">Start with the basics</a>
+          </div>
+
+          <p class="weekly">NEW RESEARCH BREAKDOWN EVERY WEEK</p>
+        </div>
+
+        <div class="hero-card">
+          <span class="mini-label">WHY ENDOCATION?</span>
+          <p>
+            Because understanding your health shouldn't require a biomedical
+            degree.
+          </p>
+
+          <div class="scribble">↘</div>
+        </div>
+      </section>
+
+      <section class="research section" id="research">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE LATEST</p>
+            <h2>This week in women's health.</h2>
+          </div>
+
+          <a href="/research" class="text-link">View all research →</a>
+        </div>
+
+        <div class="article-grid">
+          {
+            articles.map((article, index) => (
+              <article class:list={["article-card", { featured: index === 0 }]}>
+                <div class="article-meta">
+                  <span>{article.tag}</span>
+                  <span>{article.readTime}</span>
+                </div>
+
+                <h3>{article.title}</h3>
+                <p>{article.excerpt}</p>
+
+                <a href="/research" class="article-link">Read the breakdown →</a>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="breakdown section">
+        <div class="breakdown-intro">
+          <p class="eyebrow yellow">THE ENDOCATION BREAKDOWN</p>
+          <h2>Reading research shouldn't require a biomedical degree.</h2>
+          <p>
+            Every Endocation article is designed to separate what a paper
+            actually found from what the headlines might make you think it
+            found.
+          </p>
+        </div>
+
+        <div class="breakdown-steps">
+          <div>
+            <span>01</span>
+            <h3>What did they find?</h3>
+            <p>The actual result, minus the academic language.</p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <h3>How good is the evidence?</h3>
+            <p>Study design, sample size and the context that matters.</p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <h3>What doesn't it prove?</h3>
+            <p>Because interesting research is not the same as certainty.</p>
+          </div>
+
+          <div>
+            <span>04</span>
+            <h3>What could this mean for you?</h3>
+            <p>Questions and context to help you understand your care.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="basics section" id="basics">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">START HERE</p>
+            <h2>Endometriosis 101.</h2>
+          </div>
+        </div>
+
+        <div class="basics-grid">
+          <article class="basic-card intro-card">
+            <p class="mini-label">THE BIG QUESTION</p>
+            <h3>Okay... what actually is endometriosis?</h3>
+            <p>
+              A jargon-free introduction to what's happening in the body and
+              what researchers are still trying to understand.
+            </p>
+            <a href="/endometriosis-101">Learn the basics →</a>
+          </article>
+
+          <article class="basic-card">
+            <span>01</span>
+            <h3>Symptoms</h3>
+            <p>More than “just bad periods.”</p>
+          </article>
+
+          <article class="basic-card">
+            <span>02</span>
+            <h3>Diagnosis</h3>
+            <p>What actually happens and what different tests can tell you.</p>
+          </article>
+
+          <article class="basic-card">
+            <span>03</span>
+            <h3>Treatment</h3>
+            <p>Understanding your options without being told what to choose.</p>
+          </article>
+
+          <article class="basic-card">
+            <span>04</span>
+            <h3>The science</h3>
+            <p>Hormones, inflammation, pain signalling and more.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="advocate section" id="advocate">
+        <div class="advocate-copy">
+          <p class="eyebrow">ADVOCATE</p>
+          <h2>You deserve to understand the conversation.</h2>
+          <p>
+            Practical resources to help you prepare for appointments, describe
+            your symptoms clearly, understand medical terminology and ask
+            informed questions.
+          </p>
+
+          <a href="/advocate" class="button primary">Explore advocacy resources</a>
+        </div>
+
+        <div class="advocate-list">
+          <div>
+            <span>01</span>
+            <p>Preparing for an appointment</p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <p>How to communicate your symptoms</p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <p>Questions you might want to ask</p>
+          </div>
+
+          <div>
+            <span>04</span>
+            <p>Understanding medical terminology</p>
+          </div>
+
+          <div>
+            <span>05</span>
+            <p>Getting a second opinion</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+  <div class="about-copy">
+    <p class="eyebrow">BEHIND ENDOCATION</p>
+
+    <h2>Hi, I'm Anoushka.</h2>
+
+    <p class="about-lead">
+      I started Endocation because women's health research shouldn't only be
+      understandable to the people working in the lab.
+    </p>
+
+    <div class="about-divider"></div>
+
+    <p>
+      I have an MSc in <strong>Genetic Manipulation and Molecular Cell Biology</strong>.
+      My background spans molecular and cell biology and global health, and
+      Endocation sits right in the middle: translating research, questioning
+      what the evidence actually shows and making science more useful to the
+      people it affects.
+    </p>
+
+    <a href="/about">My story →</a>
+  </div>
+
+  <div class="about-image-wrap">
+    <img
+      src="/anoushka-lab.jpg"
+      alt="Anoushka in a molecular biology laboratory"
+      class="about-image"
+    />
+
+
+  </div>
+</section>
+
+     
+
+      <section class="contact section" id="contact">
+        <div>
+          <p class="eyebrow">CONTACT & COLLABORATIONS</p>
+          <h2>Let's work together.</h2>
+          <p>
+            Researcher, organisation, patient advocate or science communicator?
+            I'd love to hear from you.
+          </p>
+        </div>
+
+        <a href="/contact" class="button primary">
+          Get in touch
+        </a>
+      </section>
+	  
+	  <section class="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-copy">
+      <p class="eyebrow">THE ENDOCATION NEWSLETTER</p>
+
+      <h2>New research.<br /><span>Without the jargon.</span></h2>
+
+      <p>
+        Get the latest Endocation research breakdown straight to your inbox.
+        One email when a new article drops. No spam, just the science.
+      </p>
+    </div>
+
+    <form
+      class="newsletter-form"
+      name="newsletter"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/newsletter-success"
+    >
+      <input type="hidden" name="form-name" value="newsletter" />
+
+      <p class="newsletter-hidden">
+        <label>
+          Don't fill this out:
+          <input name="bot-field" />
+        </label>
+      </p>
+
+      <label for="newsletter-name">First name</label>
+      <input
+        id="newsletter-name"
+        type="text"
+        name="name"
+        placeholder="Your first name"
+      />
+
+      <label for="newsletter-email">Email</label>
+      <input
+        id="newsletter-email"
+        type="email"
+        name="email"
+        placeholder="you@email.com"
+        required
+      />
+
+      <button type="submit">Keep me in the loop →</button>
+
+      <p class="newsletter-small">
+        Unsubscribe anytime. Your inbox deserves boundaries too.
+      </p>
+    </form>
+  </div>
+</section>
+    </main>
+
+    <footer>
+     <a href="/" class="brand footer-brand">
+  <img
+    src="/endocation-logo.png"
+    alt="Endocation logo"
+    class="brand-logo"
+  />
+  <span>ENDOCATION</span>
+</a>
+
+      <p>
+        Evidence-led women's health education. Not individual medical advice.
+      </p>
+
+      <p class="copyright">© 2026 ENDOCATION</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #fffaf2;
+    color: #261235;
+    font-family: "Manrope", sans-serif;
+  }
+
+  :global(a) {
+    color: inherit;
+  }
+
+  .site-header {
+    width: min(1400px, calc(100% - 64px));
+    margin: 0 auto;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+  nav {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  nav a:hover {
+    color: #7a2cff;
+  }
+
+  .hero {
+    width: min(1400px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 90px 0 120px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    align-items: end;
+    gap: 80px;
+  }
+
+  .eyebrow,
+  .mini-label {
+    margin: 0 0 20px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+  }
+
+  .hero h1 {
+    max-width: 950px;
+    margin: 0;
+    font-size: clamp(4rem, 7.6vw, 8rem);
+    line-height: 0.92;
+    letter-spacing: -0.075em;
+  }
+
+  .hero h1 span {
+    display: block;
+    color: #7a2cff;
+  }
+
+  .hero-description {
+    max-width: 700px;
+    margin: 38px 0 0;
+    font-size: 1.16rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    margin-top: 38px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    min-height: 52px;
+    padding: 0 23px;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.88rem;
+  }
+
+  .primary {
+    background: #f1ff38;
+    color: #261235;
+  }
+
+  .primary:hover {
+    transform: translateY(-2px);
+  }
+
+  .secondary {
+    border: 1.5px solid #261235;
+  }
+
+  .weekly {
+    margin-top: 28px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-card {
+    min-height: 330px;
+    padding: 32px;
+    border-radius: 28px;
+    background: #ded0ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotate(2deg);
+  }
+
+  .hero-card > p:not(.mini-label) {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+
+  .scribble {
+    align-self: flex-end;
+    font-size: 4rem;
+    color: #7a2cff;
+  }
+
+  .section {
+    padding: 110px max(32px, calc((100% - 1400px) / 2));
+  }
+
+  .section-heading {
+    margin-bottom: 45px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .section h2 {
+    margin: 0;
+    font-size: clamp(2.7rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.06em;
+  }
+
+  .text-link,
+  .article-link {
+    font-weight: 800;
+    text-underline-offset: 5px;
+  }
+
+  .research {
+    background: #f0eaff;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 18px;
+  }
+
+  .article-card {
+    min-height: 430px;
+    padding: 30px;
+    background: #fffaf2;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-card.featured {
+    background: #f1ff38;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+  }
+
+  .article-card h3 {
+    margin: 65px 0 18px;
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.045em;
+  }
+
+  .article-card p {
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .article-link {
+    margin-top: auto;
+  }
+
+  .breakdown {
+    background: #6d24df;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 100px;
+  }
+
+  .yellow {
+    color: #f1ff38;
+  }
+
+  .breakdown-intro > p:last-child {
+    max-width: 580px;
+    margin-top: 30px;
+    line-height: 1.8;
+  }
+
+  .breakdown-steps {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .breakdown-steps > div {
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .breakdown-steps span {
+    color: #f1ff38;
+    font-weight: 800;
+  }
+
+  .breakdown-steps h3,
+  .breakdown-steps p {
+    margin: 0;
+  }
+
+  .breakdown-steps p {
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+
+  .basics {
+    background: #fffaf2;
+  }
+
+  .basics-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 18px;
+  }
+
+  .basic-card {
+    min-height: 240px;
+    padding: 28px;
+    border-radius: 22px;
+    background: #f2eafa;
+  }
+
+  .basic-card:nth-child(3),
+  .basic-card:nth-child(5) {
+    background: #fff3a8;
+  }
+
+  .intro-card {
+    grid-row: span 2;
+    min-height: 500px;
+    background: #261235;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .basic-card span {
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .basic-card h3 {
+    margin: 48px 0 10px;
+    font-size: 1.75rem;
+    letter-spacing: -0.04em;
+  }
+
+  .intro-card h3 {
+    margin-top: 75px;
+    font-size: 3rem;
+  }
+
+  .basic-card p {
+    line-height: 1.7;
+  }
+
+  .intro-card a {
+    margin-top: auto;
+    font-weight: 800;
+  }
+
+  .advocate {
+    background: #fff2bc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+
+  .advocate-copy > p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 30px 0;
+    line-height: 1.8;
+  }
+
+  .advocate-list {
+    border-top: 1px solid #261235;
+  }
+
+  .advocate-list div {
+    padding: 24px 0;
+    border-bottom: 1px solid #261235;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+  }
+
+  .advocate-list span {
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .advocate-list p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+
+ .about {
+  background: #fffaf2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-copy {
+  max-width: 760px;
+}
+
+.about-copy h2 {
+  margin-top: 0;
+  font-size: clamp(3.2rem, 5vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.about-lead {
+  margin: 34px 0 28px;
+  max-width: 720px;
+  font-size: 1.45rem;
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.about-divider {
+  width: 100%;
+  max-width: 640px;
+  height: 2px;
+  margin: 28px 0;
+  background: #d7c4ff;
+}
+
+.about-copy > p:not(.about-lead):not(.eyebrow) {
+  max-width: 680px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.about-copy .text-link {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+.about-image-wrap {
+  position: relative;
+  max-width: 560px;
+  justify-self: end;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
+  display: block;
+}
+
+.degree-badge {
+  position: absolute;
+  left: -35px;
+  bottom: -22px;
+  padding: 14px 20px;
+  border-radius: 18px;
+  background: #eee4ff;
+  color: #261235;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  font-weight: 750;
+  box-shadow: 0 12px 30px rgba(38, 18, 53, 0.12);
+}
+
+.degree-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: #7a2cff;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+.newsletter {
+  padding: 100px 6vw;
+  background: #f0eaff;
+}
+
+.newsletter-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.newsletter-copy .eyebrow {
+  margin-bottom: 20px;
+  color: #7a2cff;
+}
+
+.newsletter-copy h2 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.newsletter-copy h2 span {
+  color: #7a2cff;
+}
+
+.newsletter-copy > p:last-child {
+  max-width: 580px;
+  margin: 28px 0 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.newsletter-form {
+  padding: 38px;
+  border-radius: 24px;
+  background: #fffaf2;
+}
+
+.newsletter-form label {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.newsletter-form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 16px;
+  border: 1px solid rgba(38, 18, 53, 0.18);
+  border-radius: 12px;
+  outline: none;
+  background: white;
+  color: #261235;
+  font: inherit;
+}
+
+.newsletter-form input:focus {
+  border-color: #7a2cff;
+  box-shadow: 0 0 0 3px rgba(122, 44, 255, 0.1);
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 16px 20px;
+  border: 0;
+  border-radius: 12px;
+  background: #f1ff38;
+  color: #261235;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-2px);
+}
+
+.newsletter-small {
+  margin: 14px 0 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0.65;
+}
+
+.newsletter-hidden {
+  display: none;
+}
+@media (max-width: 900px) {
+  .newsletter {
+    padding: 70px 6vw;
+  }
+
+  .newsletter-inner {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .newsletter-form {
+    padding: 28px 22px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-wrap {
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .about-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .degree-badge {
+    left: -20px;
+    bottom: -18px;
+  }
+}
+
+ 
+
+  .contact {
+    background: #ded0ff;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .contact p:not(.eyebrow) {
+    max-width: 650px;
+    line-height: 1.8;
+  }
+
+  footer {
+    padding: 55px max(32px, calc((100% - 1400px) / 2));
+    background: #6d24df;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  .footer-brand {
+    color: #f1ff38;
+  }
+
+  @media (max-width: 900px) {
+    .site-header {
+  width: calc(100% - 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+    nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+nav a {
+  font-size: 0.95rem;
+}
+
+    .hero {
+      width: calc(100% - 40px);
+      padding-top: 60px;
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+    .hero-card {
+      min-height: 250px;
+    }
+
+    .section {
+      padding: 80px 20px;
+    }
+
+    .article-grid,
+    .basics-grid,
+    .breakdown,
+    .advocate,
+    .about,
+    .newsletter {
+      grid-template-columns: 1fr;
+    }
+
+    .basics-grid {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro-card {
+      min-height: 400px;
+    }
+
+    .breakdown {
+      gap: 60px;
+    }
+
+    .breakdown-steps > div {
+      grid-template-columns: 40px 1fr;
+    }
+
+    .breakdown-steps p {
+      grid-column: 2;
+    }
+
+    .section-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .contact {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    footer {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

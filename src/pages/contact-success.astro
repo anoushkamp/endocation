@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Message sent | Endocation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="card">
+        <img
+          src="/endocation-logo.png"
+          alt="Endocation logo"
+          class="logo"
+        />
+
+        <p class="eyebrow">MESSAGE SENT</p>
+
+        <h1>Thank you 💜</h1>
+
+        <p class="copy">
+          Thanks for getting in touch. Your message has been sent successfully
+          and I'll get back to you as soon as I can.
+        </p>
+
+        <a href="/" class="button">Back to Endocation →</a>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #fffaf2;
+    color: #261235;
+    font-family: "Manrope", sans-serif;
+  }
+
+  main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    width: min(680px, 100%);
+    padding: 58px;
+    background: #f0eaff;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 24px;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    color: #7a2cff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: -0.06em;
+  }
+
+  .copy {
+    max-width: 520px;
+    margin: 0 auto 34px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 16px 24px;
+    background: #f1ff38;
+    color: #261235;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .button:hover {
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 600px) {
+    .card {
+      padding: 40px 24px;
+    }
+  }
+</style>
