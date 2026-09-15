@@ -299,14 +299,10 @@ const articles = [
     </div>
 
     <form
-      class="newsletter-form"
-      name="newsletter"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/newsletter-success"
-    >
-      <input type="hidden" name="form-name" value="newsletter" />
+  class="newsletter-form"
+  action="https://app.kit.com/forms/9920359/subscriptions"
+  method="POST"
+>
 
       <p class="newsletter-hidden">
         <label>
@@ -319,7 +315,7 @@ const articles = [
       <input
         id="newsletter-name"
         type="text"
-        name="name"
+        name="fields[first_name]"
         placeholder="Your first name"
       />
 
@@ -327,7 +323,7 @@ const articles = [
       <input
         id="newsletter-email"
         type="email"
-        name="email"
+        name="email_address"
         placeholder="you@email.com"
         required
       />
