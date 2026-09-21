@@ -1,13 +1,23 @@
 ---
 const articles = [
- {
-  tag: "NEW",
-  title:
-    "Excision versus Ablation: Which is better for endometriosis-related pain?",
-  excerpt:
-    "A breakdown of Ouyang et al.'s (2022) systematic review and meta-analysis comparing excision and ablation for endometriosis-related pain.",
-  readTime: "5 MIN READ",
-},
+  {
+    tag: "NEW",
+    title:
+      "The impact of the microbiota–gut–brain axis on endometriosis-associated symptoms: mechanisms and opportunities for personalised management strategies",
+    excerpt:
+      "Article review of Hearn-Yates et al. (2024)",
+    readTime: "5 MIN READ",
+    link: "/research/microbiota-gut-brain-axis",
+  },
+  {
+    tag: "",
+    title:
+      "Excision versus Ablation: Which is better for endometriosis-related pain?",
+    excerpt:
+      "A breakdown of Ouyang et al.'s (2022) systematic review and meta-analysis comparing excision and ablation for endometriosis-related pain.",
+    readTime: "5 MIN READ",
+    link: "/research/first-paper",
+  },
 ];
 ---
 
@@ -102,7 +112,8 @@ const articles = [
                 <h3>{article.title}</h3>
                 <p>{article.excerpt}</p>
 
-                <a href="/research/first-paper" class="article-link">Read the breakdown →</a>
+                <a href={article.link} class="article-link">Read the breakdown →</a>
+
               </article>
             ))
           }
@@ -551,10 +562,21 @@ const articles = [
   }
 
   .article-grid {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr;
-    gap: 18px;
-  }
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.article-card {
+  flex: 0 0 420px;
+  min-height: 430px;
+  padding: 30px;
+  background: #fffaf2;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
 
   .article-card {
     min-height: 430px;
